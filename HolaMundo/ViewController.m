@@ -2,17 +2,22 @@
 //  ViewController.m
 //  HolaMundo
 //
-//  Created by Sandra Diez on 4/9/17.
 //  Copyright © 2017 Borja Pastor. All rights reserved.
 //
 
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextField *texto;
+@property (weak, nonatomic) IBOutlet UIButton *boton;
 
 @end
 
 @implementation ViewController
+- (IBAction)accionHola:(id)sender {
+      [self.label setText:[self.texto text]];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
